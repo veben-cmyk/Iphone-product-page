@@ -11,3 +11,15 @@ thumbnails.forEach(img => {
         document.body.style.backgroundColor = img.dataset.color;
     })
 });
+
+//on recupère le bouton du menu mobile et le menu mobile
+const menuButton = document.getElementById("menuButton");
+const mobileMenu = document.getElementById("mobileMenu");
+
+//on ajoute un event listener au bouton pour afficher ou cacher le menu mobile
+menuButton.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+    mobileMenu.classList.toggle("flex");
+    menuButton.textContent = mobileMenu.classList.contains("hidden")? "☰" : "x";
+    
+});
