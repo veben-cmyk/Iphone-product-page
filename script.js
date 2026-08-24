@@ -33,3 +33,13 @@ menuButton.addEventListener("click", () => {
     menuButton.textContent = mobileMenu.classList.contains("hidden")? "☰" : "x";
     
 });
+
+//on recupère le bouton d'appel à l'action (CTA)
+const ctaButton = document.getElementById("ctaButton");
+const colorPicker = document.getElementById("colorPicker");
+
+//on scroll vers lecolorPicker lorsque le bouton CTA est cliqué
+// scrollIntoView() → permet de scroller vers un élément
+ctaButton.addEventListener("click",()=>{
+    colorPicker.scrollIntoView({behavior: "smooth", block: "center"});
+});
