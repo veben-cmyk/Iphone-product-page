@@ -9,7 +9,17 @@ thumbnails.forEach(img => {
 
         //on change la couleur de fond du body en fonction de la couleur associée à l'image
         document.body.style.backgroundColor = img.dataset.color;
-    })
+
+        //l'effet de surbrillance sur l'image sélectionnée
+        thumbnails.forEach(t => {
+            t.classList.remove("ring-black");
+            t.classList.add("ring-transparent");
+        });
+        
+        //on ajoute la classe de surbrillance à l'image sélectionnée
+        img.classList.add("ring-black");
+        img.classList.remove("ring-transparent");
+    });
 });
 
 //on recupère le bouton du menu mobile et le menu mobile
